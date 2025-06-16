@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Mi Sitio Optimizado - Home",
   description: "Aprende sobre optimización SEO y rendimiento en Next.js.",
@@ -15,6 +17,13 @@ export default function Home() {
     <>
       <h1>Bienvenido a mi página optimizada</h1>
       <p>Aprende cómo mejorar el rendimiento y SEO en Next.js.</p>
+      <Image
+        src="/images/seo-image.png"
+        width={800}
+        height={400}
+        alt="Ejemplo de imagen optimizada"
+        priority
+      />
     </>
   );
 }
