@@ -1,9 +1,5 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
-
-const DynamicComponent = dynamic(() => import("./components/LargeComponent"), {
-  ssr: false,
-});
+import DynamicLargeComponent from "./components/DynamicLargeComponent";
 
 export const metadata = {
   title: "Mi Sitio Optimizado - Home",
@@ -29,7 +25,7 @@ export default function Home() {
         alt="Ejemplo de imagen optimizada"
         priority
       />
-      <DynamicComponent />
+      <DynamicLargeComponent />
     </>
   );
 }
